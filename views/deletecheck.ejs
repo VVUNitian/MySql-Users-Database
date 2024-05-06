@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CHECK CREDENTIALS</title>
+</head>
+<body>
+    <h1>Enter E-mail and Password</h1>
+    <form method="post" action="/user/<%= gyg.id %>?_method=DELETE">
+        <input type="text" name="email" placeholder="enter email"/>
+        <input type="password" name="password" placeholder="enter password"/>
+        <button>Submit</button>
+    </form>
+</body>
+</html>

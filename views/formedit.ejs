@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EDIT FORM</title>
+</head>
+<body>
+    <h1>You are about to update a usersname...</h1>
+    <form method="post" action="/user">
+        <h2><%= gyg.email %></h2>
+       <textarea rows="5" cols="15" name="content"><%= gyg.username %></textarea> <!--assign a name to textarea..-->
+       <input type="password" name="password" placeholder="enter password"/>
+    <button style="display: inline;">Update</button>
+</body>
+</html>

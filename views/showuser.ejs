@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALL USERS DATA</title>
+</head>
+<body>
+    <style>
+        table,tr,th,td{
+            border: 1px solid black;
+        }
+    </style>
+    <h1>All the users of the DEVILD app....</h1>
+    <br>
+    <br>
+    <a href="/newuser">Add New Users</a>
+    <br>
+    <br>
+    <table>
+        <tr>
+            <th> id </th>
+            <th> username </th>
+            <th> email</th>
+            <th> password</th>
+        </tr>
+        <% for( let index = 0; index < results.length; index++ ) { %>
+            <tr>
+                <td>  <%= results[index].id %></td>
+                <td>  <%= results[index].username %> </td>
+                <td>  <%= results[index].email %></td>
+                <td>  <%= results[index].password %></td><!--Do not show thw password...-->
+                <td>
+                <form method="get" action="/user/<%= results[index].id %>/edit">
+                    <button>Edit</button>
+                </form>
+                </td>
+                <td>
+                    <form method="get" action="/user/<%= results[index].id %>/delete">
+                        <button>DELETE</button>
+                    </form>
+                    </td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>
